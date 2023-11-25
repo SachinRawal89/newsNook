@@ -17,18 +17,21 @@ export default class App extends Component {
   constructor(){
     super();
     this.state={
-      url : '',
       progress:0
     }
   }
   setProgress=(progress)=>{
-    this.setState({progress:progress});
+    this.setState({progress:progress})
   }
   render() {
     return (
       <Router>
       <div>
     <Navbar />
+    <LoadingBar
+        color='#f11946'
+        progress={this.state.progress}
+      />
     <Routes>
     <Route exact path="/" element={<News apiKey={this.apiKey} setProgress={this.setProgress}  key="general" pageSize={this.pageSize} country='in' category='general' />} />
       <Route exact path="/business" element={<News apiKey={this.apiKey} setProgress={this.setProgress}  key="business" pageSize={this.pageSize} country='in' category='business' />} />
@@ -40,10 +43,6 @@ export default class App extends Component {
       <Route exact path="/science" element={<News apiKey={this.apiKey} setProgress={this.setProgress}  key="science" pageSize={this.pageSize} country='in' category='science' />} />
     </Routes>
     </div>
-    <LoadingBar
-        color='#f11946'
-        progress={this.state.progress}
-      />
 </Router>
     )
   }
