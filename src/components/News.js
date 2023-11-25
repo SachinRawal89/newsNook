@@ -12,8 +12,6 @@ export const News=(props)=>{
   const [page,setPage] = useState(1);
   const [totalResults,setTotalResults] = useState(0);
 
-  //   document.title = `${capitalizeFirst(props.category)} - NewsMonkey`;
-  // }
   const capitalizeFirst=(title)=>{
     return  title[0].toUpperCase()+title.slice(1);
   }
@@ -31,12 +29,14 @@ export const News=(props)=>{
     props.setProgress(100);
   }
   useEffect(()=>{
+    document.title = `${capitalizeFirst(props.category)} - NewsMonkey`;
     update();
+    /* eslint-disable */
   },[])
  
    const fetchMoreData= async()=>{
-   setPage(page+1);
-    let url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${props.apiKey}&page=${page}&pageSize=${props.pageSize}`;
+    let url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${props.apiKey}&page=${page+1}&pageSize=${props.pageSize}`;
+    setPage(page+1);
     let data = await fetch(url);
     let responseData = await data.json()
     setArticles(responseData.articles);
@@ -45,7 +45,7 @@ export const News=(props)=>{
   
     return (
       <>
-        <h1 className="text-center">NewsMonkey - Top {capitalizeFirst(props.category)} headlines</h1>
+        <h1 className="text-center" style={{marginTop:'70px'}}>NewsMonkey - Top {capitalizeFirst(props.category)} headlines</h1>
         {loading?<Spinner/>:''}
 
         <InfiniteScroll
