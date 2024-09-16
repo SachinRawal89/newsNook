@@ -24,7 +24,7 @@ export const News = (props) => {
     props.setProgress(10);
     const apiKey = process.env.REACT_APP_API_KEY;
     const limit = props.pageSize;  // The number of articles per page
-    const url = `http://api.mediastack.com/v1/news?access_key=${apiKey}&categories=${props.category}&languages=en&limit=${limit}&offset=${offset}`;
+    const url = `https://api.mediastack.com/v1/news?access_key=${apiKey}&categories=${props.category}&languages=en&limit=${limit}&offset=${offset}`;
 
     setLoading(true);
     try {
@@ -52,7 +52,7 @@ export const News = (props) => {
     const apiKey = process.env.REACT_APP_API_KEY;
     const limit = props.pageSize;
     const newOffset = offset + limit;  // Increment offset for the next page
-    const url = `http://api.mediastack.com/v1/news?access_key=${apiKey}&categories=${props.category}&languages=en&limit=${limit}&offset=${newOffset}`;
+    const url = `https://api.mediastack.com/v1/news?access_key=${apiKey}&categories=${props.category}&languages=en&limit=${limit}&offset=${newOffset}`;
 
     try {
       let data = await fetch(url);
