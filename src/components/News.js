@@ -4,6 +4,11 @@ import Spinner from './Spinner';
 import PropTypes from 'prop-types';
 import InfiniteScroll from 'react-infinite-scroll-component';
 
+
+// TODO ----------> 
+// 1. IMAGE SIZE EVEN 
+// 2. CARD REPRESENTAION IMPROVE
+// 3. NAV AND TITLE CORRECT 
 export const News = (props) => {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
