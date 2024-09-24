@@ -1,0 +1,83 @@
+.news-card {
+    width: 100%;
+    position: relative;
+    max-width: 400px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  
+  .image-container {
+    position: relative;
+    width: 100%;
+    height: 200px; /* Common height for all images */
+    overflow: hidden;
+  }
+  
+  .icon-container {
+    position: absolute;
+    bottom: 10px; /* Adjust based on your layout */
+    left: 10px; /* Adjust based on your layout */
+    display: flex;
+    gap: 10px; /* Space between icons */
+  }
+  
+  .icon {
+    color: rgb(245, 43, 43); /* Red color for icons */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 24px; /* Size of the icons */
+  }
+  .news-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the container */
+  }
+  
+  .news-content {
+    padding: 15px;
+  }
+  
+  .news-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .news-description {
+    font-size: 14px;
+    color: #6c757d; /* Greyish color for description */
+    margin: 10px 0; /* Gap of 10px */
+    line-height: 1.4;
+    text-align: justify;
+  }
+  
+  .news-sources {
+    font-size: 12px;
+    text-align: center;
+    color: #adb5bd; /* Light grey color for sources */
+  }
+  
+  .news-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .read-more {
+    font-size: 14px;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .read-more:hover {
+    text-decoration: underline;
+  }
+  
+  .news-date {
+    font-size: 12px;
+    color: #6c757d; /* Grey color for date */
+  }
+  

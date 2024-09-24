@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
-import spinner from './spinner.gif'
+import animation from '../Images/news.gif'
 
 const Spinner=()=> {
     return (
       <div className='text-center'>
-         <img src={spinner} alt="" style={{height:90,width:90}} />
+         <img src={animation} alt="" style={{height:150,width:150, objectFit:'cover'}} />
+         <h5>fetching...</h5>
       </div>
     )
 }
