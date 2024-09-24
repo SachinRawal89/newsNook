@@ -122,7 +122,7 @@ const NewsItem = ({ news }) => {
     const categoryMap = {
       business: 'business',
       entertainment: 'entertainment',
-      tech: 'tech',
+      technology: 'tech',
       sports: 'sports',
       health: 'health',
       science: 'science'
@@ -152,18 +152,7 @@ const NewsItem = ({ news }) => {
         alt="News"
         className="news-image"
       />
-      {/* <div className="icon-container">
-        <FontAwesomeIcon 
-          icon={faBookmark} 
-          className="icon bookmark-icon" 
-          onClick={handleBookmark} 
-        />
-        <FontAwesomeIcon 
-          icon={faShare} 
-          className="icon share-icon" 
-          onClick={handleShare} 
-        />
-      </div> */}
+    
     </div>
     <div className="news-content">
       <h5 className="news-title">{news.title}</h5>
