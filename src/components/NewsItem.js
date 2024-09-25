@@ -115,7 +115,8 @@ const NewsItem = ({ news }) => {
 
   // Function to get related image based on category
   const getRelatedImg = (category, title, author) => {
-
+     console.log('category is ',category);
+     
     if (category === 'general') return 'https://www.indiantelevision.com/sites/default/files/styles/smartcrop_800x800/public/images/tv-images/2021/08/02/news.jpg?itok=eEnb05ue';
 
     // Map of categories to their corresponding keys
